@@ -95,7 +95,6 @@ const Variables = () => {
               </div>
               <div className='graph-container'>
                 <BarChart
-                  title
                   chartData={{
                     labels: [10000, 20000, 30000, 40000, 50000],
                     datasets: [
