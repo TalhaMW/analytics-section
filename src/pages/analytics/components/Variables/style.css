@@ -1,0 +1,124 @@
+.variable-dropdown {
+  margin-bottom: 20px;
+}
+
+.heading-dropdown-container {
+  display: flex;
+  justify-content: space-between;
+}
+.heading-dropdown-container h2 {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--section-heading-color);
+  font-family: var(--section-heading-font);
+}
+.variable-dropdown select {
+  border-radius: 3px;
+  border: 1px solid #d3d3d3;
+  /* padding: 0.5rem 0rem; */
+  padding: 0.5rem;
+}
+.variable-card-container {
+  /* border: 1px solid #d3d3d3; */
+  /* padding: 1rem; */
+  /* background-color: orange; */
+}
+
+.card-heading-text {
+  padding: 1rem;
+}
+.card-heading-text .card-heading {
+  font-weight: 600;
+  color: var(--secondary-heading-color);
+  font-family: var(--secondary-heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  word-break: break-all;
+}
+.initial-data-table {
+  /* border: 2px solid gray; */
+
+  /* display: flex;
+  justify-content: space-between; */
+}
+.initial-data-cnt {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid rgb(188, 188, 188);
+}
+.initial-data-heading {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.initial-data-value {
+  font-size: 0.8rem;
+}
+.secondary-data-table {
+  /* border: 2px solid gray; */
+
+  /* display: flex;
+  justify-content: space-between; */
+}
+.secondary-data-cnt {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 1px solid rgb(188, 188, 188);
+}
+.secondary-data-heading {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+.secondary-data-value {
+  font-size: 0.8rem;
+}
+.graph-container {
+  /* border: 2px solid gray; */
+  padding: 1rem;
+  font-weight: bold;
+
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.graph-container canvas {
+}
+@media screen and (max-width: 500px) {
+  .graph-container {
+    width: 100%;
+  }
+  .graph-container canvas {
+    width: 100% !important;
+  }
+}
+
+.variable-card-container .card {
+  /* background-color: orangered; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  /* margin: 2rem; */
+  /* border: 1px solid red; */
+  margin: 2rem 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #e3e0e0;
+}
+
+@media screen and (max-width: 1200px) {
+  .variable-card-container .card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .heading-dropdown-container {
+    flex-direction: column;
+  }
+}

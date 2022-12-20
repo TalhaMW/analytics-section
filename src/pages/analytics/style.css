@@ -1,0 +1,35 @@
+.analytics-container {
+  max-width: 1160px;
+  margin: 0 auto;
+
+  padding: 50px 12px 4px 12px;
+}
+
+.overview-section {
+  margin-top: 40px;
+}
+.overview-section .overview-heading {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--section-heading-color);
+  font-family: var(--section-heading-font);
+}
+.overview-tabs-section-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+}
+
+.variables-section {
+  margin-top: 40px;
+  padding: 0 6px;
+}
+.variables-section .variables-heading {
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--section-heading-color);
+  font-family: var(--section-heading-font);
+}
