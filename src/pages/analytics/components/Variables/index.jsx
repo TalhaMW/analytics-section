@@ -60,7 +60,7 @@ const Variables = () => {
         </select>
       </div> */}
       <div className='variable-card-container'>
-        {renderigData.map((data) => {
+        {renderigData?.map((data) => {
           return (
             <div className='card'>
               <div className='card-heading-text'>
@@ -70,7 +70,7 @@ const Variables = () => {
                 </div>
               </div>
               <div className='initial-data-table'>
-                {data.intialTableData.map((data) => {
+                {data.intialTableData?.map((data) => {
                   return (
                     <div className='initial-data-cnt'>
                       <div className='initial-data-heading'>
@@ -82,7 +82,7 @@ const Variables = () => {
                 })}
               </div>
               <div className='secondary-data-table'>
-                {data.secondaryTableData.map((data) => {
+                {data.secondaryTableData?.map((data) => {
                   return (
                     <div className='secondary-data-cnt'>
                       <div className='secondary-data-heading'>
@@ -94,28 +94,39 @@ const Variables = () => {
                 })}
               </div>
               <div className='graph-container'>
-                <BarChart
-                  chartData={{
-                    labels: [10000, 20000, 30000, 40000, 50000],
-                    datasets: [
-                      {
-                        label: data.variableHeading,
-                        data: [
-                          '12000',
-                          '21000',
-                          '63000',
-                          '35000',
-                          '52000',
-                          '42000',
-                          ,
-                          '11000',
-                          '67000',
-                        ],
-                        backgroundColor: ['#377eb8'],
-                      },
-                    ],
-                  }}
-                />
+                {data.chartData?.chartType === 'Bar' ? (
+                  <BarChart
+                    min={data.chartData?.min}
+                    max={data.chartData?.max}
+                    axix='x'
+                    stepSize={data.chartData?.stepSize}
+                    chartData={{
+                      labels: data.chartData?.chartlabels,
+                      // labels: [-124, -122, -120, -118, -116, -114],
+                      datasets: [
+                        {
+                          label: data.variableHeading,
+                          data: data.chartData?.chartData,
+                          backgroundColor: ['#377eb8'],
+                        },
+                      ],
+                    }}
+                  />
+                ) : (
+                  <BarChart
+                    axix='y'
+                    chartData={{
+                      labels: data.chartData?.chartlabels,
+                      datasets: [
+                        {
+                          label: data.variableHeading,
+                          data: data.chartData?.chartData,
+                          backgroundColor: ['#377eb8'],
+                        },
+                      ],
+                    }}
+                  />
+                )}
               </div>
             </div>
           );
